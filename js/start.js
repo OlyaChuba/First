@@ -32,7 +32,7 @@ var b = 2; //declaring a variable
 
 a = 4
 
-console.log("hello Olya");
+alert("hello Olya");
 
 
 
