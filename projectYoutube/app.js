@@ -10,7 +10,6 @@ todoButton.addEventListener("click", addTodo)
 
 //Functions
 function addTodo(event){
-    alert("test1")
     //Prevent form from submitting
     event.preventDefault();
     
@@ -18,7 +17,7 @@ function addTodo(event){
     todoDiv.classList.add("todo");
     //Create Li
     const newTodo = document.createElement("li");
-    newTodo.innerText = "hey";
+    newTodo.innerText = todoInput.value;
     newTodo.classList.add("todo-item");
     todoDiv.appendChild(newTodo);
     //Check mark button
@@ -29,10 +28,13 @@ function addTodo(event){
     //check trash button
     const trashButton = document.createElement("button");
     trashButton.innerHTML = '<i class="fas fa-trash"></i>';
-    trashdButton.classList.add("complete-btn");
+    trashButton.classList.add("trash-btn");
     todoDiv.appendChild(trashButton);
     //append to list
     todoList.appendChild(todoDiv);
+
+    //clear todo input value
+    todoInput.value = "";
 
    
 
